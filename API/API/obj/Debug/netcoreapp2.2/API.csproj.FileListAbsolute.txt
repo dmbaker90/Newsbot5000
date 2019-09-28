@@ -1,3 +1,0 @@
-C:\Workspace\Newsbot5000\API\API\obj\Debug\netcoreapp2.2\API.csproj.CoreCompileInputs.cache
-C:\Workspace\Newsbot5000\API\API\obj\Debug\netcoreapp2.2\API.AssemblyInfoInputs.cache
-C:\Workspace\Newsbot5000\API\API\obj\Debug\netcoreapp2.2\API.AssemblyInfo.cs
