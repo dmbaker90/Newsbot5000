@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\Newsbot5000\\API\\API\\API.csproj": {}
+    "C:\\Workspace\\Newsbot5000\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\Newsbot5000\\API\\API\\API.csproj": {
+    "C:\\Workspace\\Newsbot5000\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\Newsbot5000\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Workspace\\Newsbot5000\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Workspace\\Newsbot5000\\API\\API\\API.csproj",
+        "projectPath": "C:\\Workspace\\Newsbot5000\\API\\API.csproj",
         "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\Newsbot5000\\API\\API\\obj\\",
+        "outputPath": "C:\\Workspace\\Newsbot5000\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -55,12 +55,16 @@
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.2.7, )",
               "autoReferenced": true
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.7.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

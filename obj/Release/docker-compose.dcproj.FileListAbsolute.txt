@@ -1,0 +1,5 @@
+C:\Workspace\Newsbot5000\bin\Release\API.dll
+C:\Workspace\Newsbot5000\bin\Release\API.pdb
+C:\Workspace\Newsbot5000\obj\Release\docker-compose.dcprojAssemblyReference.cache
+C:\Workspace\Newsbot5000\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Workspace\Newsbot5000\obj\Release\docker-compose.dcproj.CopyComplete

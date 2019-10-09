@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace API
 {
@@ -26,6 +27,21 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "Newsbot5000 API (test3)",
+                    Description = "Newsbot5000 API v1",
+                    TermsOfService = "None",
+                    Contact = new Contact() {
+                        Name = "David Baker",
+                        Email = "dmbaker90@gmail.com",
+                        Url = "www.davidmbaker.dev"
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +59,12 @@ namespace API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Newsbot5000 API V1");
+            });
         }
     }
 }
