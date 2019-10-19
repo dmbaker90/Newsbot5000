@@ -1,0 +1,178 @@
+[1mdiff --git a/.vs/Newsbot5000/DesignTimeBuild/.dtbcache b/.vs/Newsbot5000/DesignTimeBuild/.dtbcache[m
+[1mindex 651cfdc..16ee0c7 100644[m
+Binary files a/.vs/Newsbot5000/DesignTimeBuild/.dtbcache and b/.vs/Newsbot5000/DesignTimeBuild/.dtbcache differ
+[1mdiff --git a/.vs/Newsbot5000/config/applicationhost.config b/.vs/Newsbot5000/config/applicationhost.config[m
+[1mindex 47e1f31..fbdd0e8 100644[m
+[1m--- a/.vs/Newsbot5000/config/applicationhost.config[m
+[1m+++ b/.vs/Newsbot5000/config/applicationhost.config[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m﻿<?xml version="1.0" encoding="UTF-8"?>[m
+ <!--[m
+ [m
+     IIS configuration sections.[m
+[36m@@ -164,6 +164,15 @@[m
+           <binding protocol="https" bindingInformation="*:44306:localhost" />[m
+         </bindings>[m
+       </site>[m
+[32m+[m[32m      <site name="WebApp" id="3">[m
+[32m+[m[32m        <application path="/" applicationPool="Clr4IntegratedAppPool">[m
+[32m+[m[32m          <virtualDirectory path="/" physicalPath="C:\Workspace\Newsbot5000\WebApp" />[m
+[32m+[m[32m        </application>[m
+[32m+[m[32m        <bindings>[m
+[32m+[m[32m          <binding protocol="http" bindingInformation="*:60433:localhost" />[m
+[32m+[m[32m          <binding protocol="https" bindingInformation="*:44342:localhost" />[m
+[32m+[m[32m        </bindings>[m
+[32m+[m[32m      </site>[m
+       <siteDefaults>[m
+         <!-- To enable logging, please change the below attribute "enable" to "true" -->[m
+         <logFile logFormat="W3C" directory="%AppData%\Microsoft\IISExpressLogs" enabled="false" />[m
+[36m@@ -993,4 +1002,20 @@[m
+       </httpCompression>[m
+     </system.webServer>[m
+   </location>[m
+[32m+[m[32m  <location path="WebApp" inheritInChildApplications="false">[m
+[32m+[m[32m    <system.webServer>[m
+[32m+[m[32m      <modules>[m
+[32m+[m[32m        <remove name="WebMatrixSupportModule" />[m
+[32m+[m[32m      </modules>[m
+[32m+[m[32m      <handlers>[m
+[32m+[m[32m        <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />[m
+[32m+[m[32m      </handlers>[m
+[32m+[m[32m      <aspNetCore processPath="%LAUNCHER_PATH%" arguments="%LAUNCHER_ARGS%" stdoutLogEnabled="false" startupTimeLimit="3600" requestTimeout="23:00:00" />[m
+[32m+[m[32m      <httpCompression>[m
+[32m+[m[32m        <dynamicTypes>[m
+[32m+[m[32m          <add mimeType="text/event-stream" enabled="false" />[m
+[32m+[m[32m        </dynamicTypes>[m
+[32m+[m[32m      </httpCompression>[m
+[32m+[m[32m    </system.webServer>[m
+[32m+[m[32m  </location>[m
+ </configuration>[m
+\ No newline at end of file[m
+[1mdiff --git a/.vs/Newsbot5000/v16/Server/sqlite3/storage.ide b/.vs/Newsbot5000/v16/Server/sqlite3/storage.ide[m
+[1mindex ed44fdd..ecc6651 100644[m
+Binary files a/.vs/Newsbot5000/v16/Server/sqlite3/storage.ide and b/.vs/Newsbot5000/v16/Server/sqlite3/storage.ide differ
+[1mdiff --git a/API/bin/Release/netcoreapp2.2/API.deps.json b/API/bin/Release/netcoreapp2.2/API.deps.json[m
+[1mindex 8d18425..5306cd3 100644[m
+[1m--- a/API/bin/Release/netcoreapp2.2/API.deps.json[m
+[1m+++ b/API/bin/Release/netcoreapp2.2/API.deps.json[m
+[36m@@ -1,7 +1,7 @@[m
+ {[m
+   "runtimeTarget": {[m
+     "name": ".NETCoreApp,Version=v2.2",[m
+[31m-    "signature": "90079c4e076b0a217dd11509b84927ffb6b31423"[m
+[32m+[m[32m    "signature": ""[m
+   },[m
+   "compilationOptions": {[m
+     "defines": [[m
+[36m@@ -10,7 +10,7 @@[m
+       "NETCOREAPP",[m
+       "NETCOREAPP2_2"[m
+     ],[m
+[31m-    "languageVersion": "",[m
+[32m+[m[32m    "languageVersion": "7.3",[m
+     "platform": "",[m
+     "allowUnsafe": false,[m
+     "warningsAsErrors": false,[m
+[1mdiff --git a/API/obj/API.csproj.nuget.dgspec.json b/API/obj/API.csproj.nuget.dgspec.json[m
+[1mindex e0086a2..b431bd9 100644[m
+[1m--- a/API/obj/API.csproj.nuget.dgspec.json[m
+[1m+++ b/API/obj/API.csproj.nuget.dgspec.json[m
+[36m@@ -68,10 +68,16 @@[m
+             }[m
+           },[m
+           "imports": [[m
+[31m-            "net461"[m
+[32m+[m[32m            "net461",[m
+[32m+[m[32m            "net462",[m
+[32m+[m[32m            "net47",[m
+[32m+[m[32m            "net471",[m
+[32m+[m[32m            "net472",[m
+[32m+[m[32m            "net48"[m
+           ],[m
+           "assetTargetFallback": true,[m
+[31m-          "warn": true[m
+[32m+[m[32m          "warn": true,[m
+[32m+[m[32m          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"[m
+         }[m
+       }[m
+     }[m
+[1mdiff --git a/API/obj/API.csproj.nuget.g.props b/API/obj/API.csproj.nuget.g.props[m
+[1mindex 1e90551..8cd2066 100644[m
+[1m--- a/API/obj/API.csproj.nuget.g.props[m
+[1m+++ b/API/obj/API.csproj.nuget.g.props[m
+[36m@@ -7,7 +7,7 @@[m
+     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>[m
+     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\David\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>[m
+     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>[m
+[31m-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.1.0</NuGetToolVersion>[m
+[32m+[m[32m    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.3.0</NuGetToolVersion>[m
+   </PropertyGroup>[m
+   <PropertyGroup>[m
+     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>[m
+[1mdiff --git a/API/obj/Release/netcoreapp2.2/API.csproj.FileListAbsolute.txt b/API/obj/Release/netcoreapp2.2/API.csproj.FileListAbsolute.txt[m
+[1mindex 96e9062..aebc700 100644[m
+[1m--- a/API/obj/Release/netcoreapp2.2/API.csproj.FileListAbsolute.txt[m
+[1m+++ b/API/obj/Release/netcoreapp2.2/API.csproj.FileListAbsolute.txt[m
+[36m@@ -17,7 +17,6 @@[m [mC:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.runtimeconfig.json[m
+ C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.runtimeconfig.dev.json[m
+ C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.dll[m
+ C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.pdb[m
+[31m-C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.csproj.CoreCompileInputs.cache[m
+ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cache[m
+ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cs[m
+ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.AssemblyInfoInputs.cache[m
+[36m@@ -26,3 +25,6 @@[m [mC:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.RazorTargetAssemblyIn[m
+ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.dll[m
+ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.pdb[m
+ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.csprojAssemblyReference.cache[m
+[32m+[m[32mC:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\appsettings.Development.json[m
+[32m+[m[32mC:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\appsettings.json[m
+[32m+[m[32mC:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\Properties\launchSettings.json[m
+[1mdiff --git a/API/obj/project.assets.json b/API/obj/project.assets.json[m
+[1mindex dae9317..43609e7 100644[m
+[1m--- a/API/obj/project.assets.json[m
+[1m+++ b/API/obj/project.assets.json[m
+[36m@@ -12320,10 +12320,16 @@[m
+           }[m
+         },[m
+         "imports": [[m
+[31m-          "net461"[m
+[32m+[m[32m          "net461",[m
+[32m+[m[32m          "net462",[m
+[32m+[m[32m          "net47",[m
+[32m+[m[32m          "net471",[m
+[32m+[m[32m          "net472",[m
+[32m+[m[32m          "net48"[m
+         ],[m
+         "assetTargetFallback": true,[m
+[31m-        "warn": true[m
+[32m+[m[32m        "warn": true,[m
+[32m+[m[32m        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"[m
+       }[m
+     }[m
+   }[m
+[1mdiff --git a/Newsbot5000.sln b/Newsbot5000.sln[m
+[1mindex f0f8334..81b88f9 100644[m
+[1m--- a/Newsbot5000.sln[m
+[1m+++ b/Newsbot5000.sln[m
+[36m@@ -10,6 +10,8 @@[m [mProject("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution[m
+ 		README.md = README.md[m
+ 	EndProjectSection[m
+ EndProject[m
+[32m+[m[32mProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{280BF497-9B79-4440-9DBD-47FDE9028C88}"[m
+[32m+[m[32mEndProject[m
+ Global[m
+ 	GlobalSection(SolutionConfigurationPlatforms) = preSolution[m
+ 		Debug|Any CPU = Debug|Any CPU[m
+[36m@@ -20,6 +22,10 @@[m [mGlobal[m
+ 		{A5D5D92B-2A3D-49EB-86D2-BC0FCC0A9967}.Debug|Any CPU.Build.0 = Debug|Any CPU[m
+ 		{A5D5D92B-2A3D-49EB-86D2-BC0FCC0A9967}.Release|Any CPU.ActiveCfg = Release|Any CPU[m
+ 		{A5D5D92B-2A3D-49EB-86D2-BC0FCC0A9967}.Release|Any CPU.Build.0 = Release|Any CPU[m
+[32m+[m		[32m{280BF497-9B79-4440-9DBD-47FDE9028C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU[m
+[32m+[m		[32m{280BF497-9B79-4440-9DBD-47FDE9028C88}.Debug|Any CPU.Build.0 = Debug|Any CPU[m
+[32m+[m		[32m{280BF497-9B79-4440-9DBD-47FDE9028C88}.Release|Any CPU.ActiveCfg = Release|Any CPU[m
+[32m+[m		[32m{280BF497-9B79-4440-9DBD-47FDE9028C88}.Release|Any CPU.Build.0 = Release|Any CPU[m
+ 	EndGlobalSection[m
+ 	GlobalSection(SolutionProperties) = preSolution[m
+ 		HideSolutionNode = FALSE[m

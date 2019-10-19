@@ -17,7 +17,6 @@ C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.runtimeconfig.json
 C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.runtimeconfig.dev.json
 C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.dll
 C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\API.pdb
-C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.csproj.CoreCompileInputs.cache
 C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cache
 C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.RazorAssemblyInfo.cs
 C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.AssemblyInfoInputs.cache
@@ -26,3 +25,6 @@ C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.RazorTargetAssemblyIn
 C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.dll
 C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.pdb
 C:\Workspace\Newsbot5000\API\obj\Release\netcoreapp2.2\API.csprojAssemblyReference.cache
+C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\appsettings.Development.json
+C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\appsettings.json
+C:\Workspace\Newsbot5000\API\bin\Release\netcoreapp2.2\Properties\launchSettings.json
