@@ -34,7 +34,8 @@ namespace API
                 builder =>
                 {
                     builder.WithOrigins("http://localhost:4200",
-                                        "http://www.newsbot5000.com")
+                                        "http://www.newsbot5000.com",
+                                        "ec2-3-19-219-12.us-east-2.compute.amazonaws.com")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                 });
