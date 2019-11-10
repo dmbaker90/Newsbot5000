@@ -1,7 +1,9 @@
 <div class="news-home">
     <div class="article" *ngFor="let article of articles">
-        <a href="{{article.url}}"><img src="{{article.urlToImage}}" /></a>
+        <a class="article-img" href="{{article.url}}" target="_blank">
+            <img src="{{article.urlToImage}}" />
+        </a>
         <div>{{ article.title}}</div>
-        <a href="{{article.url}}">{{ article.source.name}}</a>
+        <a href="{{article.url}}" target="_blank">{{ article.source.name}}</a>
     </div>
 </div>
