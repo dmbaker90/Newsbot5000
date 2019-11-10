@@ -1,0 +1,8 @@
+C:\Workspace\Newsbot5000\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+C:\Workspace\Newsbot5000\Services\bin\Debug\netcoreapp2.2\Services.dll
+C:\Workspace\Newsbot5000\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+C:\Workspace\Newsbot5000\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+C:\Workspace\Newsbot5000\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+C:\Workspace\Newsbot5000\Services\bin\Debug\netcoreapp2.2\Services.pdb
+C:\Workspace\Newsbot5000\Services\obj\Debug\netcoreapp2.2\Services.dll
+C:\Workspace\Newsbot5000\Services\obj\Debug\netcoreapp2.2\Services.pdb

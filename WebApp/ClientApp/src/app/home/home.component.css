@@ -1,0 +1,18 @@
+.news-home {
+    min-height: 700px;
+    background: white;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.article {
+    border: 2px solid lightblue;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}

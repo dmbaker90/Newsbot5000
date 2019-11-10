@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
+using Services;
 
 namespace API
 {
@@ -40,6 +41,8 @@ namespace API
                                 .AllowAnyMethod();
                 });
             });
+
+            services.AddScoped<NewsApiService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c =>

@@ -1,18 +1,31 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.nav-container {
+    display: flex;
+    background: white;
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.header-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.img-wrapper{
+    height: 100px;
+}
+
+img {
+    width: auto;
+    height: 100%;
+}
+
+a,a:link,a:visited,a:hover,a:focus,a:active{
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-title {
+    padding-left: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: gold;
 }
